@@ -11,7 +11,7 @@ public class Member {
         private Long id;
 
         @NotEmpty
-        private String loginid; //로그인 아이디
+        private String loginId; //로그인 아이디
 
         @NotEmpty
         private String name;
