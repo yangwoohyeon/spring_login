@@ -21,13 +21,13 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping("/")
+   @GetMapping("/")
     public String homeLogin(@CookieValue(name="memberId",required = false)Long memberId, Model model){
         if(memberId==null){
             return "home";
         }
 
-        Member loginMember = memberRepository.findById(memberId);
+        Member loginMember = memberRepository.findById(memberId); //쿠키의 멤버 ID를 통해 멤버 찾기
 
         if(loginMember==null){
             return "home";
